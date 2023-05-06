@@ -7,7 +7,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
-
 public class LoginMenu extends Application {
     public static Stage stage;
     public static void main(String[] args) {

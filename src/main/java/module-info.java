@@ -1,4 +1,5 @@
 module com.example.aagame {
+
     requires javafx.controls;
     requires javafx.fxml;
 
