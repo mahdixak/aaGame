@@ -1,9 +1,8 @@
-module com.example.aagame {
-
+module com.example.aa {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    exports aagame.view;
-    opens aagame.view to javafx.fxml;
+    opens com.example.aa to javafx.fxml;
+    exports com.example.aa;
 }
