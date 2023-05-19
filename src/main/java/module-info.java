@@ -1,8 +1,10 @@
 module com.example.aa {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.media;
 
-
-    opens com.example.aa to javafx.fxml;
-    exports com.example.aa;
+    exports view;
+    opens view to javafx.fxml;
+    exports view.controllers;
+    opens view.controllers to javafx.fxml;
 }

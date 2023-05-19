@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controllers.StartMenuController"
+            stylesheets="@../CSS/style.css"
+            prefHeight="400.0" prefWidth="600.0">
+    <center>
+        <VBox spacing="30" alignment="CENTER" prefWidth="500" prefHeight="500">
+            <Label text="welcome tho AA!" prefHeight="30" prefWidth="100"/>
+            <Button text="signup" onMouseClicked="#registrationPage" prefHeight="30" prefWidth="100"/>
+            <Button text="login" onMouseClicked="#loginPage" prefHeight="30" prefWidth="100"/>
+            <Button text="play as guest" onMouseClicked="#playAsGuest" prefHeight="30" prefWidth="100"/>
+            <Button text="quit" onMouseClicked="#terminateProgram" prefHeight="30" prefWidth="100"/>
+        </VBox>
+    </center>
+
+</BorderPane>

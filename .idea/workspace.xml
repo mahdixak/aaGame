@@ -4,17 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833aa146-f347-456a-adc1-9a933531ee18" name="Changes" comment="" />
+    <list default="true" id="0909396e-34d8-4ccc-8c09-a655c225fc76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/aa/hello-view.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="2PxYGdRBNk8kqcXNGh3ddfSQJVy" />
@@ -27,11 +49,47 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mahdi.ak/Documents/GitHub/aaGame/src/main/resources/images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame\src\main\resources\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="StartMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.StartMenu" />
+      <module name="AA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartMenu" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,5 +115,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/aaGame$StartMenu.ic" NAME="StartMenu Coverage Results" MODIFIED="1684494925274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>view.*</FILTER>
+    </SUITE>
   </component>
 </project>

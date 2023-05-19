@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.UserMenuController">
+   <bottom>
+      <HBox alignment="CENTER" cache="true" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" spacing="20">
+         <children>
+            <Button mnemonicParsing="false" text="New Game" onMouseClicked="#newGame"/>
+            <Button mnemonicParsing="false" text="Load Game" onMouseClicked="#loadGame"/>
+            <Button mnemonicParsing="false" text="Show High-score" onMouseClicked="#showHighScore"/>
+            <Button mnemonicParsing="false" text="Logout" onMouseClicked="#logoutUser"/>
+            <Button mnemonicParsing="false" text="Delete Account" onMouseClicked="#deleteAccount"/>
+            <Button mnemonicParsing="false" text="Exit" onMouseClicked="#terminateProgram"/>
+         </children>
+         <effect>
+            <Blend mode="HARD_LIGHT" />
+         </effect>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+      </HBox>
+   </bottom>
+</BorderPane>
