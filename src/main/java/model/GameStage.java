@@ -17,6 +17,8 @@ public class GameStage{
         Image icon = new Image(String.valueOf(StartMenu.class.getResource("/images/icon.png")));
         GameStage.gameStage.getIcons().add(icon);
         GameStage.gameStage.setTitle("aa Game!");
+        GameStage.gameStage.setResizable(false);
+        GameStage.gameStage.setFullScreen(false);
     }
     public static void setStageScene(Scene scene) {
         gameStage.setScene(scene);

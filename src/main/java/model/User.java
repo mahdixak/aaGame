@@ -1,10 +1,14 @@
 package model;
 
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 
 public class User {
     private String username;
     private String password;
+    private int difficulty;
+    private Image avatar;
     private static final ArrayList<User> allUsers = new ArrayList<>();
 
     public User(String username, String password) {
@@ -18,6 +22,22 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public Image getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(Image avatar) {
+        this.avatar = avatar;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 
     public void setUsername(String username) {

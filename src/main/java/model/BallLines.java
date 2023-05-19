@@ -2,6 +2,6 @@ package model;
 
 import javafx.scene.shape.Rectangle;
 
-public class ballLines extends Rectangle {
+public class BallLines extends Rectangle {
 
 }

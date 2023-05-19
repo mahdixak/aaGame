@@ -7,13 +7,17 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.GameStage;
 
-public class GameMenu extends Application {
+import java.net.URL;
+
+public class AvatarMenu extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
-        BorderPane borderPane = FXMLLoader.load(GameMenu.class.getResource("FXML/gameMenu.fxml"));
+        URL url = AvatarMenu.class.getResource("/FXML/avatarMenu.fxml");
+        BorderPane borderPane = FXMLLoader.load(url);
         Scene scene = new Scene(borderPane);
-        GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
+        GameStage.setGameStage(stage);
         GameStage.getGameStage().show();
     }
 }

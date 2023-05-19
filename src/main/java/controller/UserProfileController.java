@@ -4,24 +4,15 @@ import model.User;
 import view.enums.status.UserProfileStatus;
 
 public class UserProfileController {
+    private final User currentPlayer ;
 
-
-    public UserProfileStatus deletingAccountCheck(String username,String password) {
-        User user = User.findUserWithUsername(username);
-        if (user != null) {
-            if (user.getPassword().equals(password)) {
-                deleteAccount(user);
-                return UserProfileStatus.ACCOUNT_DELETED_SUCCESSFULLY;
-            }
-            return UserProfileStatus.INCORRECT_PASSWORD;
-        }
-        return UserProfileStatus.USERNAME_DOES_NOT_EXISTS;
+    public UserProfileController(String currentPlayer) {
+        this.currentPlayer = User.findUserWithUsername(currentPlayer);
     }
 
-    private void deleteAccount(User user) {
-        User deletedUser = User.findUserWithUsername(user.getUsername());
-        deletedUser.setUsername("");
-        deletedUser.setPassword("");
-        User.allUsers().remove(deletedUser);
+    private void deleteAccount() {
+        currentPlayer.setUsername("");
+        currentPlayer.setPassword("");
+        User.allUsers().remove(currentPlayer);
     }
 }

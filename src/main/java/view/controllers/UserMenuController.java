@@ -4,6 +4,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 public class UserMenuController {
+    private final String currentPlayer;
+
+    public UserMenuController(String currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
     public void move(KeyEvent keyEvent) {
         String key = keyEvent.getCode().getName();
         if (key.equals("Left"))
@@ -29,8 +35,10 @@ public class UserMenuController {
     }
 
     public void deleteAccount(MouseEvent mouseEvent) {
+
     }
 
-    public void terminateProgram(MouseEvent mouseEvent) {
+    public void terminateProgram() {
+        System.exit(0);
     }
 }
