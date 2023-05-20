@@ -2,13 +2,11 @@ package view.controllers;
 
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import model.GameStage;
+import view.AccountSettings;
 
 public class UserMenuController {
-    private final String currentPlayer;
-
-    public UserMenuController(String currentPlayer) {
-        this.currentPlayer = currentPlayer;
-    }
+    private static String currentPlayer;
 
     public void move(KeyEvent keyEvent) {
         String key = keyEvent.getCode().getName();
@@ -34,11 +32,15 @@ public class UserMenuController {
     public void logoutUser(MouseEvent mouseEvent) {
     }
 
-    public void deleteAccount(MouseEvent mouseEvent) {
-
-    }
-
     public void terminateProgram() {
         System.exit(0);
+    }
+
+    public static void setCurrentPlayer(String username) {
+        currentPlayer = username;
+    }
+
+    public void accountSettings() throws Exception {
+        new AccountSettings().start(GameStage.getGameStage());
     }
 }

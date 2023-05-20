@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controllers.AccountSettingsMenuController"
+            prefHeight="600.0" prefWidth="600.0">
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <Label text="Account Settings" />
+            <Button text="Account Details" onMouseClicked="#accountDetails" />
+            <Button text="Change Username" onMouseClicked="#changePlayerUsername"/>
+            <Button text="Change Password" onMouseClicked="#changePlayerPassword" />
+            <Button text="High-score" onMouseClicked="#showHighScore"/>
+            <Button text="Delete Account"  onMouseClicked="#deleteAccount"/>
+            <Button text="Set Game Difficulty" onMouseClicked="#setGameDifficulty"/>
+            <Button text="back" onMouseClicked="#goBack" />
+        </VBox>
+    </center>
+</BorderPane>

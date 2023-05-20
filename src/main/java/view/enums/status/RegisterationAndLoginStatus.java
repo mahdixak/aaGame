@@ -10,7 +10,12 @@ public enum RegisterationAndLoginStatus {
     PASSWORD_CHECKED_SUCCESSFULLY("password checked successfully!"),
     INVALID_PASSWORD_NO_DIGITS("your password most contain digit(s)!"),
     INVALID_PASSWORD_T0O_SHORT("your password is too short!"),
-    USER_CREATED_SUCCESSFULLY("user created successfully!");
+    USER_CREATED_SUCCESSFULLY("user created successfully!"),
+    INCORRECT_PASSWORD("your password is incorrect!"),
+    USERNAME_DOES_NOT_EXISTS("no user with this username exist!"),
+
+    LOGIN_PARAMETERS_ARE_VALID("login parameters are valid"),
+    ;
 
     private final String status;
 

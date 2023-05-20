@@ -13,7 +13,7 @@
             prefHeight="600.0" prefWidth="600.0">
     <center>
         <VBox alignment="CENTER" spacing="20">
-            <Text text="Registration" />
+            <Label text="Registration"/>
             <TextField promptText="username:" maxHeight="100" maxWidth="200" fx:id="username"/>
             <PasswordField promptText="password:" maxHeight="100" maxWidth="200" fx:id="password"/>
             <HBox spacing="20" alignment="CENTER">

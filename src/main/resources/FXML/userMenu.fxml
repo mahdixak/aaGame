@@ -15,7 +15,7 @@
             <Button mnemonicParsing="false" text="Load Game" onMouseClicked="#loadGame"/>
             <Button mnemonicParsing="false" text="Show High-score" onMouseClicked="#showHighScore"/>
             <Button mnemonicParsing="false" text="Logout" onMouseClicked="#logoutUser"/>
-            <Button mnemonicParsing="false" text="Delete Account" onMouseClicked="#deleteAccount"/>
+            <Button mnemonicParsing="false" text="Account Settings" onMouseClicked="#accountSettings"/>
             <Button mnemonicParsing="false" text="Exit" onMouseClicked="#terminateProgram"/>
          </children>
          <effect>

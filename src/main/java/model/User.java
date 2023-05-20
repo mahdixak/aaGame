@@ -1,19 +1,23 @@
 package model;
 
 import javafx.scene.image.Image;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 
 import java.util.ArrayList;
 
 public class User {
     private String username;
     private String password;
-    private int difficulty;
-    private Image avatar;
+    private Difficulty difficulty;
+    private int highScore;
+    private Circle avatar;
     private static final ArrayList<User> allUsers = new ArrayList<>();
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.highScore = 0;
     }
 
     public String getUsername() {
@@ -24,19 +28,19 @@ public class User {
         return password;
     }
 
-    public int getDifficulty() {
+    public Difficulty getDifficulty() {
         return difficulty;
     }
 
-    public Image getAvatar() {
+    public Circle getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(Image avatar) {
+    public void setAvatar(Circle avatar) {
         this.avatar = avatar;
     }
 
-    public void setDifficulty(int difficulty) {
+    public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
     }
 
@@ -63,5 +67,9 @@ public class User {
             }
         }
         return null;
+    }
+
+    public int getHighScore() {
+        return highScore;
     }
 }

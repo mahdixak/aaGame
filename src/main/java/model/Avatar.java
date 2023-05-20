@@ -10,6 +10,5 @@ public class Avatar extends Circle {
     public Avatar(double v, Image avatar) {
         super(v);
         this.avatar = avatar;
-
     }
 }
