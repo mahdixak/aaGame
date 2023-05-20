@@ -1,12 +1,14 @@
 package view.controllers;
 
-import controller.RegistrationAndLoginController;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import model.GameStage;
 import view.StartMenu;
+import view.UserMenu;
+
 
 public class AvatarMenuController extends RegistrationMenuController{
     private static String currentUser;
@@ -55,8 +57,9 @@ public class AvatarMenuController extends RegistrationMenuController{
     public void selectAvatar(MouseEvent mouseEvent) throws Exception {
         Circle circle = (Circle) mouseEvent.getSource();
         registrationAndLoginController.setCurrentUsername(currentUser);
-        System.out.println(registrationAndLoginController.getCurrentUsername());
         registrationAndLoginController.setUserAvatar(circle);
+        UserMenuController.setCurrentPlayer(currentUser);
+        new UserMenu().start(GameStage.getGameStage());
     }
 
     public static void setCurrentUser(String username) {

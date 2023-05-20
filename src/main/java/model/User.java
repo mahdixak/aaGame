@@ -18,6 +18,7 @@ public class User {
         this.username = username;
         this.password = password;
         this.highScore = 0;
+        this.setDifficulty(Difficulty.EASY);
     }
 
     public String getUsername() {

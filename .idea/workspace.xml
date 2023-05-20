@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0909396e-34d8-4ccc-8c09-a655c225fc76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationAndLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationAndLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Avatar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/RegistrationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/RegistrationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/AccountSettingsMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/AccountSettingsMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/AvatarMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/AvatarMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/LoginMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/RegistrationMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/RegistrationMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/StartMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/StartMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/UserMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/enums/status/RegisterationAndLoginStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/enums/status/RegisterationAndLoginStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/enums/status/UserProfileStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/enums/status/UserProfileStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/avatarMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/avatarMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/registrationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/registrationMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/userMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/userMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -71,6 +71,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="view" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame\src\main\resources\CSS" />
       <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame\src\main\resources\images" />
@@ -127,7 +130,7 @@
       <workItem from="1684558477244" duration="1944000" />
       <workItem from="1684560584673" duration="30000" />
       <workItem from="1684560742911" duration="1134000" />
-      <workItem from="1684562256952" duration="8868000" />
+      <workItem from="1684562256952" duration="19802000" />
     </task>
     <servers />
   </component>

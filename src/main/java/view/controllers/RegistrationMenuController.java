@@ -2,10 +2,7 @@ package view.controllers;
 
 import controller.RegistrationAndLoginController;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.*;
 import model.GameStage;
 import view.AvatarMenu;
 import view.StartMenu;
@@ -17,6 +14,7 @@ public class RegistrationMenuController {
     @FXML
     private TextField username;
     RegistrationAndLoginController registrationAndLoginController = new RegistrationAndLoginController();
+
     public void checkTextFieldsForCreatingAccount() throws Exception {
         registrationAndLoginController.setCurrentUsername(username.getText());
         RegisterationAndLoginStatus status = registrationAndLoginController.checkUsernameField();
@@ -42,7 +40,7 @@ public class RegistrationMenuController {
         }
     }
 
-    public void clearFields(MouseEvent mouseEvent) {
+    public void clearFields() {
         username.setText("");
         password.setText("");
     }
@@ -50,7 +48,5 @@ public class RegistrationMenuController {
     public void goBack() throws Exception {
         new StartMenu().start(GameStage.getGameStage());
     }
-
-
 
 }

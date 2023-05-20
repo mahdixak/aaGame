@@ -24,7 +24,7 @@ public class RegistrationAndLoginController {
 
     public RegisterationAndLoginStatus checkPasswordField(String password) {
         if (password.length() != 0) {
-            if (password.length() > 6) {
+            if (password.length() >= 6) {
                 if (password.matches(".*\\d+.*")) {
                     if (!password.matches(".*\\s+.*")) {
                         return RegisterationAndLoginStatus.PASSWORD_CHECKED_SUCCESSFULLY;
@@ -46,8 +46,6 @@ public class RegistrationAndLoginController {
     public void setUserAvatar(Circle circle) throws Exception {
         User user = User.findUserWithUsername(this.currentUsername);
         user.setAvatar(circle);
-        UserMenuController.setCurrentPlayer(this.currentUsername);
-        new UserMenu().start(GameStage.getGameStage());
     }
 
     public String getCurrentUsername() {

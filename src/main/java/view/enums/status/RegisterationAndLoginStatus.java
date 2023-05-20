@@ -13,7 +13,6 @@ public enum RegisterationAndLoginStatus {
     USER_CREATED_SUCCESSFULLY("user created successfully!"),
     INCORRECT_PASSWORD("your password is incorrect!"),
     USERNAME_DOES_NOT_EXISTS("no user with this username exist!"),
-
     LOGIN_PARAMETERS_ARE_VALID("login parameters are valid"),
     ;
 

@@ -1,24 +1,16 @@
 package view.controllers;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import model.GameStage;
 import view.AccountSettings;
+import view.StartMenu;
 
 public class UserMenuController {
     private static String currentPlayer;
-
-    public void move(KeyEvent keyEvent) {
-        String key = keyEvent.getCode().getName();
-        if (key.equals("Left"))
-            System.out.println("left");
-        else if (key.equals("Right"))
-            System.out.println("right");
-        else if (key.equals("Down"))
-            System.out.println("down");
-        else if (key.equals("Up"))
-            System.out.println("up");
-    }
 
     public void newGame(MouseEvent mouseEvent) {
     }
@@ -29,7 +21,8 @@ public class UserMenuController {
     public void showHighScore(MouseEvent mouseEvent) {
     }
 
-    public void logoutUser(MouseEvent mouseEvent) {
+    public void logoutUser() throws Exception{
+        new StartMenu().start(GameStage.getGameStage());
     }
 
     public void terminateProgram() {
@@ -41,6 +34,8 @@ public class UserMenuController {
     }
 
     public void accountSettings() throws Exception {
+        AccountSettingsMenuController.setCurrentUser(currentPlayer);
         new AccountSettings().start(GameStage.getGameStage());
     }
+
 }
