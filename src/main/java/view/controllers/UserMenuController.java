@@ -7,12 +7,14 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import model.GameStage;
 import view.AccountSettings;
+import view.NewGameMenu;
 import view.StartMenu;
 
 public class UserMenuController {
     private static String currentPlayer;
 
-    public void newGame(MouseEvent mouseEvent) {
+    public void newGame() throws Exception {
+        new NewGameMenu().start(GameStage.getGameStage());
     }
 
     public void loadGame(MouseEvent mouseEvent) {

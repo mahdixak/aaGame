@@ -19,7 +19,6 @@
             <Button text="High-score" onMouseClicked="#showHighScore"/>
             <Button text="Delete Account"  onMouseClicked="#deleteAccount"/>
             <ComboBox fx:id="comboBox" onInputMethodTextChanged="#changeGameDifficulty"/>
-            <ChoiceBox accessibleText="Change Game Difficulty" onMouseClicked="#changeGameDifficulty" />
             <Button text="back" onMouseClicked="#goBack" />
         </VBox>
     </center>

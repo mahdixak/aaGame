@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
 import model.GameStage;
 import view.*;
@@ -41,7 +42,7 @@ public class AccountSettingsMenuController implements Initializable {
         }
     }
 
-    public void changeGameDifficulty(MouseEvent mouseEvent) {
+    public void changeGameDifficulty(InputMethodEvent mouseEvent) {
         ComboBox<String> comboBox1 = (ComboBox<String>) mouseEvent.getSource();
     }
 
