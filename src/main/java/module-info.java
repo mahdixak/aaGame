@@ -5,6 +5,4 @@ module com.example.aa {
 
     exports view;
     opens view to javafx.fxml;
-    exports view.controllers;
-    opens view.controllers to javafx.fxml;
 }

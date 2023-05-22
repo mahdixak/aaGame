@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.controllers.AvatarMenuController"
+            fx:controller="view.AvatarMenu"
             prefHeight="600.0" prefWidth="600.0">
     <center>
         <VBox alignment="CENTER" spacing="20">

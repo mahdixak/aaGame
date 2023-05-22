@@ -16,7 +16,6 @@ public class StartMenu extends Application {
         launch(args);
     }
 
-
     @Override
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = FXMLLoader.load(Objects.requireNonNull(StartMenu.class.getResource("/FXML/startGame.fxml")));
@@ -26,4 +25,20 @@ public class StartMenu extends Application {
         GameStage.getGameStage().show();
     }
 
+    public void registrationPage() throws Exception {
+        RegistrationMenu registrationMenu = new RegistrationMenu();
+        registrationMenu.start(GameStage.getGameStage());
+    }
+
+    public void loginPage() throws Exception {
+        new LoginMenu().start(GameStage.getGameStage());
+    }
+
+    public void playAsGuest() throws Exception {
+        new GuestMenu().start(GameStage.getGameStage());
+    }
+
+    public void terminateProgram() {
+        System.exit(0);
+    }
 }

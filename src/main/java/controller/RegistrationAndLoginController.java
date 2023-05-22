@@ -1,15 +1,12 @@
 package controller;
 
 import javafx.scene.shape.Circle;
-import model.GameStage;
 import model.User;
-import view.UserMenu;
-import view.controllers.RegistrationMenuController;
-import view.controllers.UserMenuController;
 import view.enums.status.RegisterationAndLoginStatus;
 
 public class RegistrationAndLoginController {
     private String currentUsername;
+
 
     public RegisterationAndLoginStatus checkUsernameField() {
         if (this.currentUsername.length() != 0) {
@@ -43,7 +40,7 @@ public class RegistrationAndLoginController {
         user.addUser();
     }
 
-    public void setUserAvatar(Circle circle) throws Exception {
+    public void setUserAvatar(Circle circle) {
         User user = User.findUserWithUsername(this.currentUsername);
         user.setAvatar(circle);
     }

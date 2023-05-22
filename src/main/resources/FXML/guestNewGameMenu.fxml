@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.GuestMenu"
+            prefHeight="600.0" prefWidth="600.0">
+    <center>
+        <HBox alignment="CENTER" spacing="50" >
+            <VBox alignment="CENTER" spacing="20">
+                <Text text="select your game difficulty"/>
+                <ComboBox fx:id="comboBox" onInputMethodTextChanged="#changeGameDifficulty"/>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="20">
+                <Button text="Single Player Game" onMouseClicked="#singlePlayerMode" prefHeight="30" prefWidth="100"/>
+                <Button text="Play With Friend" onMouseClicked="#playWithFriend" prefHeight="30" prefWidth="100"/>
+                <Button text="Back" onMouseClicked="#goBack" prefHeight="30" prefWidth="100"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

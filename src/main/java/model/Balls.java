@@ -1,5 +1,6 @@
 package model;
 
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -18,15 +19,20 @@ public class Balls extends Circle {
     }
 
     public void moveLeft() {
-        if (this.getCenterX() > 400 )
+        if (this.getCenterX() > 300 )
             this.setCenterX(this.getCenterX() - 20);
     }
 
     public void moveRight() {
-        if (this.getCenterX() < 600)
+        if (this.getCenterX() < 500)
             this.setCenterX(this.getCenterX() + 20);
     }
 
     public void dropBall() {
+    }
+
+    public void shoot(Pane gamePane) {
+        ShootingAnimation shootingAnimation = new ShootingAnimation(gamePane,(MainBall) gamePane.getChildren().get(0),(Balls) gamePane.getChildren().get(1));
+        shootingAnimation.play();
     }
 }
