@@ -16,7 +16,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class NewGameMenu extends Application implements Initializable {
-    private String currentPlayer;
     @FXML
     private ComboBox<String> comboBox;
 
@@ -36,26 +35,20 @@ public class NewGameMenu extends Application implements Initializable {
 
     public void singlePlayerMode() throws Exception {
         SinglePlayerModePage singlePlayerModePage = new SinglePlayerModePage();
-        singlePlayerModePage.setName(currentPlayer);
         singlePlayerModePage.start(GameStage.getGameStage());
     }
 
     public void playWithFriend() throws Exception {
         PlayWithFriendPage playerWithFriend = new PlayWithFriendPage();
-        playerWithFriend.setName(currentPlayer);
         playerWithFriend.start(GameStage.getGameStage());
     }
 
     public void goBack() throws Exception {
         UserMenu userMenu = new UserMenu();
-        userMenu.setName(currentPlayer);
         userMenu.start(GameStage.getGameStage());
     }
 
     public void changeGameDifficulty(InputMethodEvent inputMethodEvent) {
     }
 
-    public void setName(String currentPlayer) {
-        this.currentPlayer = currentPlayer;
-    }
 }

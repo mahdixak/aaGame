@@ -9,7 +9,7 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="view.LoginMenu"
-            prefHeight="600.0" prefWidth="600.0">
+            prefHeight="800.0" prefWidth="800.0">
     <center>
         <VBox spacing="30" alignment="CENTER" prefWidth="500" prefHeight="500">
             <Label text="Login Panel" prefHeight="30" prefWidth="100" styleClass="label"/>

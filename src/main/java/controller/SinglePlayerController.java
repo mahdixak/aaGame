@@ -4,20 +4,22 @@ import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
-import model.Balls;
+import model.Ball;
 import model.MainBall;
 import model.User;
-import view.StartMenu;
 
 public class SinglePlayerController {
     private User currentPlayer;
 
-    public User getCurrentPlayer() {
-        return currentPlayer;
+    public String getCurrentPlayer() {
+        return currentPlayer.getUsername();
     }
 
     public void setCurrentPlayer(String currentPlayerName) {
-        this.currentPlayer = User.findUserWithUsername(currentPlayerName);
+        if (currentPlayerName.equals("guest"))
+            this.currentPlayer = new User("guest","guest123");
+        else
+            this.currentPlayer = User.findUserWithUsername(currentPlayerName);
     }
 
     public void createPanel(Pane gamePane) {
@@ -35,7 +37,7 @@ public class SinglePlayerController {
 
 
     public void setBall(Pane gamePane) {
-        Balls ball = new Balls();
+        Ball ball = new Ball();
         gamePane.getChildren().add(ball);
         gamePane.getChildren().get(0).requestFocus();
         gamePane.setOnKeyPressed(new EventHandler<KeyEvent>() {

@@ -15,6 +15,7 @@ import model.GameStage;
 import view.enums.status.RegisterationAndLoginStatus;
 
 import static view.Controllers.registrationAndLoginController;
+import static view.Controllers.userProfileController;
 
 public class LoginMenu extends Application {
     @FXML
@@ -35,10 +36,8 @@ public class LoginMenu extends Application {
         registrationAndLoginController.setCurrentUsername(username.getText());
         RegisterationAndLoginStatus status = registrationAndLoginController.checkLoggingInParameters(password.getText());
         if (status.equals(RegisterationAndLoginStatus.LOGIN_PARAMETERS_ARE_VALID)) {
-            UserProfileController userProfileController = new UserProfileController();
             userProfileController.setCurrentPlayer(username.getText());
             UserMenu userMenu = new UserMenu();
-            userMenu.setName(username.getText());
             userMenu.start(GameStage.getGameStage());
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);

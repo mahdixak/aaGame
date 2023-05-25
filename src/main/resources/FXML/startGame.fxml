@@ -11,7 +11,7 @@
             fx:controller="view.StartMenu"
             stylesheets="@../CSS/style.css"
             styleClass="BackGround"
-            prefHeight="600.0" prefWidth="600.0">
+            prefHeight="800.0" prefWidth="800.0">
     <center>
         <VBox spacing="30" alignment="CENTER" prefWidth="500" prefHeight="500">
             <Label text="welcome tho AA!" prefHeight="30" prefWidth="100" styleClass="label"/>

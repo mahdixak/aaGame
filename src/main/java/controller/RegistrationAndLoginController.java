@@ -2,12 +2,13 @@ package controller;
 
 import javafx.scene.shape.Circle;
 import model.User;
+import view.Controllers;
 import view.enums.status.RegisterationAndLoginStatus;
+
+import static view.Controllers.userProfileController;
 
 public class RegistrationAndLoginController {
     private String currentUsername;
-
-
     public RegisterationAndLoginStatus checkUsernameField() {
         if (this.currentUsername.length() != 0) {
             User user = User.findUserWithUsername(this.currentUsername);
@@ -35,14 +36,16 @@ public class RegistrationAndLoginController {
         return RegisterationAndLoginStatus.EMPTY_PASSWORD_FIELD;
     }
 
-    public void signingUser(String password) {
+    public void signingUser(String password) throws Exception {
         User user = new User(this.currentUsername, password);
         user.addUser();
     }
 
     public void setUserAvatar(Circle circle) {
         User user = User.findUserWithUsername(this.currentUsername);
-        user.setAvatar(circle);
+        user.setAvatar(circle.getId());
+        userProfileController.setCurrentPlayer(user.getUsername());
+        JsonController.setUserInformationToJson();
     }
 
     public String getCurrentUsername() {

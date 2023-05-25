@@ -17,7 +17,6 @@ import java.net.URL;
 import static view.Controllers.*;
 
 public class AvatarMenu extends Application {
-    private String currentUser;
     @FXML
     private Circle circle1 = new Circle();
     @FXML
@@ -72,12 +71,12 @@ public class AvatarMenu extends Application {
         Circle circle = (Circle) mouseEvent.getSource();
         registrationAndLoginController.setUserAvatar(circle);
         UserMenu userMenu = new UserMenu();
-        userMenu.setName(currentUser);
         userMenu.start(GameStage.getGameStage());
     }
 
-    public void setName(String playerName) {
-        this.currentUser = playerName;
-        registrationAndLoginController.setCurrentUsername(playerName);
+    public void uploadAvatar(MouseEvent mouseEvent) {
+    }
+
+    public void randomAvatar(MouseEvent mouseEvent) {
     }
 }

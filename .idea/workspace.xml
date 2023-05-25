@@ -5,37 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0909396e-34d8-4ccc-8c09-a655c225fc76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/json-20230227.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GameSettingsController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationAndLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationAndLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SinglePlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SinglePlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Balls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SinglePlayerGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Avatar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Difficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Difficulty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShootingAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/animations/shootingBalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AvatarMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AvatarMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Controllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Controllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GuestMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GuestMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/NewGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewGameMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/PasswordChangeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PasswordChangeMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/PlayerWithFriendPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PlayWithFriendPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/PlayWithFriendPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PlayWithFriendPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/RegistrationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/RegistrationMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/SinglePlayerModePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/SinglePlayerModePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/StartMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/UserMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/UsernameChangeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/UsernameChangeMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/AccountSettingsMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/AvatarMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/GameMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/LoginMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/RegistrationMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/StartMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/UserMenuController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/avatarMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/avatarMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/gameMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/guestNewGameMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/guestNewGameMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/loginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/loginMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/newGameMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/newGameMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/passwordChangeMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/passwordChangeMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/registrationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/registrationMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/singlePlayerPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/singlePlayerPane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/startGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/startGame.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/userMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/userMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/usernameChangeMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/usernameChangeMenu.fxml" afterDir="false" />
@@ -50,8 +54,8 @@
       <list>
         <option value="CSS File" />
         <option value="Enum" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -78,7 +82,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mahdi.ak/Downloads/Graphics2/Graphics2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mahdi.ak/Documents/GitHub/aaGame&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -94,6 +98,7 @@
       <recent name="view" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame" />
       <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame\src\main\resources\CSS" />
       <recent name="C:\Users\mahdi.ak\Documents\GitHub\aaGame\src\main\resources\images" />
     </key>
@@ -173,7 +178,13 @@
       <workItem from="1684695765868" duration="269000" />
       <workItem from="1684696053188" duration="1834000" />
       <workItem from="1684736809257" duration="5268000" />
-      <workItem from="1684742745560" duration="6332000" />
+      <workItem from="1684742745560" duration="6388000" />
+      <workItem from="1684832253797" duration="3832000" />
+      <workItem from="1684849026495" duration="1899000" />
+      <workItem from="1684853927079" duration="1822000" />
+      <workItem from="1684855789537" duration="7560000" />
+      <workItem from="1684993180983" duration="125000" />
+      <workItem from="1684993688477" duration="15184000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,6 @@
 <Pane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="view.SinglePlayerModePage"
-            prefHeight="800.0" prefWidth="800.0">
+            prefHeight="1000.0" prefWidth="1000.0">
 
 </Pane>

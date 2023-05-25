@@ -11,6 +11,7 @@ import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.GameStage;
+import static view.Controllers.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -36,13 +37,13 @@ public class GuestMenu extends Application implements Initializable {
 
     public void singlePlayerMode() throws Exception {
         SinglePlayerModePage singlePlayerModePage = new SinglePlayerModePage();
-        singlePlayerModePage.setName("guest");
+        singlePlayerController.setCurrentPlayer("guest");
+        gameController.setPlayerUsername("guest");
         singlePlayerModePage.start(GameStage.getGameStage());
     }
 
     public void playWithFriend() throws Exception {
         PlayWithFriendPage playWithFriend = new PlayWithFriendPage();
-        playWithFriend.setName("guest");
         playWithFriend.start(GameStage.getGameStage());
     }
 

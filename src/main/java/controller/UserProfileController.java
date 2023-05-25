@@ -6,13 +6,16 @@ import view.enums.status.UserProfileStatus;
 
 public class UserProfileController {
     private User currentPlayer ;
+
+
     public void setCurrentPlayer(String currentPlayerName) {
         this.currentPlayer = User.findUserWithUsername(currentPlayerName);
     }
-    public void deleteAccount() {
+    public void deleteAccount() throws Exception {
         currentPlayer.setUsername("");
         currentPlayer.setPassword("");
         User.allUsers().remove(currentPlayer);
+        JsonController.moveDataToFile();
     }
 
     public String getPlayerName() {
@@ -23,9 +26,9 @@ public class UserProfileController {
         return currentPlayer.getPassword();
     }
 
-    public Paint getPlayerAvatar() {
-        return currentPlayer.getAvatar().getFill();
-    }
+//    public Paint getPlayerAvatar() {
+//        return currentPlayer.getAvatar().getFill();
+//    }
 
     public String getPlayerHighScore() {
         return String.valueOf(currentPlayer.getHighScore());
@@ -55,10 +58,11 @@ public class UserProfileController {
         return UserProfileStatus.NEW_USERNAME_FIELD_IS_EMPTY;
     }
 
-    public void changeUsername(String newUsername) {
+    public void changeUsername(String newUsername) throws Exception {
         User user = currentPlayer;
         user.setUsername(newUsername);
         currentPlayer.setUsername(newUsername);
+        JsonController.moveDataToFile();
     }
 
     public UserProfileStatus changePlayerPasswordCheck(String username,String oldPassword, String newPassword) {
@@ -83,9 +87,14 @@ public class UserProfileController {
         return UserProfileStatus.USERNAME_FIELD_IS_EMPTY;
     }
 
-    public void changePassword(String newPassword) {
+    public void changePassword(String newPassword) throws Exception {
         User user = currentPlayer;
         user.setPassword(newPassword);
         currentPlayer.setPassword(newPassword);
+        JsonController.moveDataToFile();
+    }
+
+    public String getPlayerAvatar() {
+        return currentPlayer.getAvatar().getAvatarUrl();
     }
 }

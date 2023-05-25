@@ -1,6 +1,5 @@
 package view;
 
-import controller.UserProfileController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -19,10 +18,10 @@ import model.GameStage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static view.Controllers.currentPlayer;
 import static view.Controllers.userProfileController;
 
 public class AccountSettings extends Application implements Initializable {
-    private String currentUser;
     @FXML
     private ComboBox<String> comboBox;
 
@@ -44,14 +43,12 @@ public class AccountSettings extends Application implements Initializable {
     public void showHighScore() {
     }
 
-    public void deleteAccount(MouseEvent mouseEvent) throws Exception {
+    public void deleteAccount() throws Exception {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Deleting Account Confirmation");
         alert.setHeaderText("Are you SURE to delete your account?");
         alert.showAndWait();
-        Button answer = (Button) mouseEvent.getSource();
-        if (answer.getText().equals("ok")) {
-            userProfileController.setCurrentPlayer(currentUser);
+        if (alert.getResult().getText().equals("OK")) {
             userProfileController.deleteAccount();
             new StartMenu().start(GameStage.getGameStage());
         }
@@ -64,27 +61,21 @@ public class AccountSettings extends Application implements Initializable {
 
     public void goBack() throws Exception {
         UserMenu userMenu = new UserMenu();
-        userMenu.setName(currentUser);
         userMenu.start(GameStage.getGameStage());
     }
 
     public void accountDetails() throws Exception {
         AccountDetails accountDetails = new AccountDetails();
-        accountDetails.setName(currentUser);
         accountDetails.start(GameStage.getGameStage());
     }
 
     public void changePlayerUsername() throws Exception {
         UsernameChangeMenu usernameChangeMenu = new UsernameChangeMenu();
-        usernameChangeMenu.setName(currentUser);
-        usernameChangeMenu.start(GameStage.getGameStage());
+            usernameChangeMenu.start(GameStage.getGameStage());
     }
 
     public void changePlayerPassword() throws Exception {
         new PasswordChangeMenu().start(GameStage.getGameStage());
     }
 
-    public void setName(String currentPlayer) {
-        this.currentUser = currentPlayer;
-    }
 }

@@ -12,7 +12,4 @@ public class PlayWithFriendPage extends Application {
 
     }
 
-    public void setName(String currentPlayer) {
-        this.currentPlayer = currentPlayer;
-    }
 }

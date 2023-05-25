@@ -1,6 +1,5 @@
 package view;
 
-import controller.RegistrationAndLoginController;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,7 +37,6 @@ public class RegistrationMenu extends Application {
             if (status.equals(RegisterationAndLoginStatus.PASSWORD_CHECKED_SUCCESSFULLY)) {
                 registrationAndLoginController.signingUser(password.getText());
                 AvatarMenu avatarMenu = new AvatarMenu();
-                avatarMenu.setName(username.getText());
                 avatarMenu.start(GameStage.getGameStage());
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);

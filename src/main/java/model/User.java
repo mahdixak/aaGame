@@ -11,14 +11,21 @@ public class User {
     private String password;
     private Difficulty difficulty;
     private int highScore;
-    private Circle avatar;
+    private Avatar avatar;
     private static final ArrayList<User> allUsers = new ArrayList<>();
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.highScore = 0;
+        this.highScore = -8;
         this.setDifficulty(Difficulty.EASY);
+    }
+    public User(String username,String password,long highScore,String difficultly,String avatar) {
+        this.username = username;
+        this.password = password;
+        this.highScore = (int) highScore;
+        Difficulty.setUserDifficulty(this,difficultly);
+        Avatar.setUserAvatar(this,avatar);
     }
 
     public String getUsername() {
@@ -33,11 +40,38 @@ public class User {
         return difficulty;
     }
 
-    public Circle getAvatar() {
+    public Avatar getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(Circle avatar) {
+    public void setAvatar(String avatarIndex) {
+        if (avatarIndex.equals("circle1"))
+            this.avatar = Avatar.avatar1;
+        else if (avatarIndex.equals("circle2"))
+            this.avatar = Avatar.avatar2;
+        else if (avatarIndex.equals("circle3"))
+            this.avatar = Avatar.avatar3;
+        else if (avatarIndex.equals("circle4"))
+            this.avatar = Avatar.avatar4;
+        else if (avatarIndex.equals("circle5"))
+            this.avatar = Avatar.avatar5;
+        else if (avatarIndex.equals("circle6"))
+            this.avatar = Avatar.avatar6;
+        else if (avatarIndex.equals("circle7"))
+            this.avatar = Avatar.avatar7;
+        else if (avatarIndex.equals("circle8"))
+            this.avatar = Avatar.avatar8;
+        else if (avatarIndex.equals("circle9"))
+            this.avatar = Avatar.avatar9;
+        else if (avatarIndex.equals("circle10"))
+            this.avatar = Avatar.avatar10;
+        else if (avatarIndex.equals("circle11"))
+            this.avatar = Avatar.avatar11;
+        else if (avatarIndex.equals("circle12"))
+            this.avatar = Avatar.avatar12;
+    }
+
+    public void setAvatar(Avatar avatar) {
         this.avatar = avatar;
     }
 
@@ -72,5 +106,9 @@ public class User {
 
     public int getHighScore() {
         return highScore;
+    }
+
+    public void riseHighscore() {
+        this.highScore += this.getDifficulty().getHighScoreForEachShoot();
     }
 }

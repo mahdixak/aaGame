@@ -3,12 +3,12 @@ package view;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.GameStage;
 
 public class UserMenu extends Application {
-    private String currentPlayer;
 
 
     @Override
@@ -22,14 +22,15 @@ public class UserMenu extends Application {
 
     public void newGame() throws Exception {
         NewGameMenu newGameMenu = new NewGameMenu();
-        newGameMenu.setName(currentPlayer);
         newGameMenu.start(GameStage.getGameStage());
     }
 
     public void loadGame() {
     }
 
-    public void showHighScore() {
+    public void showHighScore() throws Exception {
+//        Controllers.gameController.showHighScores();
+        new HighScoreMenu().start(GameStage.getGameStage());
     }
 
     public void logoutUser() throws Exception {
@@ -42,11 +43,10 @@ public class UserMenu extends Application {
 
     public void accountSettings() throws Exception {
         AccountSettings accountSettings = new AccountSettings();
-        accountSettings.setName(currentPlayer);
         accountSettings.start(GameStage.getGameStage());
     }
 
-    public void setName(String currentUser) {
-        this.currentPlayer = currentUser;
+    public void goBack() throws Exception {
+        new UserMenu().start(GameStage.getGameStage());
     }
 }
