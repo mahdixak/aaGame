@@ -58,4 +58,16 @@ public enum Difficulty {
     public int getFrizeTime() {
         return frizeTime;
     }
+
+    public int getNumberOfBalls() {
+        return numberOfBalls;
+    }
+
+    public double getWindSpeed() {
+        return windSpeed;
+    }
+
+    public int getSpinSpeed() {
+        return spinSpeed;
+    }
 }

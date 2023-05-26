@@ -1,5 +1,6 @@
 package controller;
 
+import model.Ball;
 import model.User;
 
 import java.util.ArrayList;
@@ -23,6 +24,10 @@ public class GameController {
 
     public void addHighCoreForShootingBall() {
         currentPlayer.riseHighscore();
+    }
+
+    public void addBallLine(Ball ball) {
+
     }
 
 //    public void showHighScores() {

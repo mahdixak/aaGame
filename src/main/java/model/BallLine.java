@@ -2,8 +2,8 @@ package model;
 
 import javafx.scene.shape.Rectangle;
 
-public class BallLines extends Rectangle {
-    public BallLines() {
+public class BallLine extends Rectangle {
+    public BallLine() {
         super(5,50);
     }
 }

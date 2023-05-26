@@ -4,12 +4,17 @@ import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
 import model.Ball;
+import model.BallLine;
 import model.MainBall;
 import model.User;
 
 public class SinglePlayerController {
     private User currentPlayer;
+    private Pane gamePane;
 
     public String getCurrentPlayer() {
         return currentPlayer.getUsername();
@@ -22,7 +27,7 @@ public class SinglePlayerController {
             this.currentPlayer = User.findUserWithUsername(currentPlayerName);
     }
 
-    public void createPanel(Pane gamePane) {
+    public void createPanel() {
         MainBall mainBall = new MainBall();
 //        Background background = new Background(setBackground());
 //        gamePane.setBackground(background);
@@ -36,24 +41,42 @@ public class SinglePlayerController {
     }
 
 
-    public void setBall(Pane gamePane) {
-        Ball ball = new Ball();
-        gamePane.getChildren().add(ball);
-        gamePane.getChildren().get(0).requestFocus();
-        gamePane.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                String keyName = keyEvent.getCode().getName();
-                if (keyName.equals("Left")) {
-                    ball.moveLeft();
+    public void setBall() {
+        for (int i=currentPlayer.getDifficulty().getNumberOfBalls();i>0;i--) {
+            Ball ball = new Ball(i);
+            gamePane.getChildren().add(ball);
+            gamePane.getChildren().get(0).requestFocus();
+            gamePane.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                @Override
+                public void handle(KeyEvent keyEvent) {
+                    String keyName = keyEvent.getCode().getName();
+                    if (keyName.equals("Left")) {
+                        ball.moveLeft();
+                    } else if (keyName.equals("Right"))
+                        ball.moveRight();
+                    else if (keyName.equals("Up") || keyName.equals("Space")) {
+                        ball.shoot(gamePane);
+                        System.out.println("boz");
+                    }
                 }
-                else if (keyName.equals("Right"))
-                    ball.moveRight();
-                else if (keyName.equals("Up")||keyName.equals("Space")){
-                    ball.shoot(gamePane);
-                    System.out.println("boz");
-                }
-            }
-        });
+            });
+        }
+    }
+    public void ballSetToMainBall(Ball ball) {
+//        BallLine ballLine = new BallLine();
+        Line line = new Line();
+        line.setFill(Color.BLACK);
+        line.setStartX(ball.getCenterX());
+        line.setEndX(ball.getCenterY());
+        line.setStartY(gamePane.getChildren().get(1).getLayoutY());
+        line.setEndY(gamePane.getChildren().get(0).getLayoutY());
+        gamePane.getChildren().add(line);
+    }
+    public Pane getGamePane() {
+        return gamePane;
+    }
+
+    public void setGamePane(Pane gamePane) {
+        this.gamePane = gamePane;
     }
 }

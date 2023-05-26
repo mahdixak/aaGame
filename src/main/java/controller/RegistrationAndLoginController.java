@@ -1,9 +1,15 @@
 package controller;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
+import model.Avatar;
 import model.User;
 import view.Controllers;
 import view.enums.status.RegisterationAndLoginStatus;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import static view.Controllers.userProfileController;
 
@@ -67,5 +73,29 @@ public class RegistrationAndLoginController {
             return RegisterationAndLoginStatus.EMPTY_PASSWORD_FIELD;
         }
         return RegisterationAndLoginStatus.EMPTY_USERNAME_FIELD;
+    }
+
+    public void setOwnAvatarForUser(String avatarAddress) {
+        Avatar.uploadedAvatar.setUploadedAvatar(avatarAddress);
+        User user = User.findUserWithUsername(this.currentUsername);
+        user.setAvatar(Avatar.uploadedAvatar);
+        JsonController.setUserInformationToJson();
+    }
+
+    public boolean avatarAddressCheck(String avatarAddress) throws MalformedURLException {
+        if (avatarAddress.length() != 0) {
+            //todo: irad dre
+//            URL url = new URL(avatarAddress);
+            System.out.println(avatarAddress);
+            System.out.println(getClass().getResource(avatarAddress));
+            System.out.println(getClass().getResource(avatarAddress).toExternalForm());
+            Image image = new Image(avatarAddress);
+            ImageView imageView = new ImageView(image);
+            System.out.println(imageView.getImage());
+            System.out.println(image.getUrl());
+            System.out.println(image.getUrl());
+            return true;
+        }
+        return false;
     }
 }

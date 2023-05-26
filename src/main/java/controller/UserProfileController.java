@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.scene.paint.Paint;
+import model.Difficulty;
 import model.User;
 import view.enums.status.UserProfileStatus;
 
@@ -96,5 +97,16 @@ public class UserProfileController {
 
     public String getPlayerAvatar() {
         return currentPlayer.getAvatar().getAvatarUrl();
+    }
+
+    public void setPlayerDifficulty(String difficulty) {
+        Difficulty.setUserDifficulty(currentPlayer,difficulty);
+        if (!currentPlayer.getUsername().equals("guest")) {
+            try {
+                JsonController.moveDataToFile();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

@@ -1,17 +1,28 @@
 package view;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.stage.Modality;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 import model.GameStage;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 import static view.Controllers.*;
@@ -75,6 +86,62 @@ public class AvatarMenu extends Application {
     }
 
     public void uploadAvatar(MouseEvent mouseEvent) {
+        Stage popUpStage = new Stage();
+        popUpStage.initModality(Modality.APPLICATION_MODAL);
+        popUpStage.setWidth(400);
+        popUpStage.setHeight(250);
+        popUpStage.setFullScreen(false);
+        popUpStage.setResizable(false);
+        Label label = new Label();
+        label.setText("enter your own avatar address");
+        TextField textField = new TextField();
+        textField.setPromptText("avatar address");
+        HBox hBox = new HBox();
+        hBox.setAlignment(Pos.CENTER);
+        hBox.setSpacing(30);
+        Button cancel = new Button();
+        cancel.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                popUpStage.close();
+            }
+        });
+        cancel.setText("cancel");
+        Button setAvatar = new Button();
+        setAvatar.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    if (registrationAndLoginController.avatarAddressCheck(textField.getText())) {
+                        registrationAndLoginController.setOwnAvatarForUser(textField.getText());
+                        popUpStage.close();
+                        try {
+                            new UserMenu().start(GameStage.getGameStage());
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Error while set avatar");
+                        alert.setHeaderText("address is invalid!");
+                        alert.setContentText("you most set your avatar address here!");
+                        alert.showAndWait();
+                    }
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+        setAvatar.setText("set avatar");
+        hBox.getChildren().addAll(setAvatar,cancel);
+        VBox vBox = new VBox();
+        vBox.setAlignment(Pos.CENTER);
+        vBox.setSpacing(30);
+        vBox.getChildren().addAll(label,textField,hBox);
+        Scene scene = new Scene(vBox);
+        popUpStage.setScene(scene);
+        popUpStage.show();
+
     }
 
     public void randomAvatar(MouseEvent mouseEvent) {

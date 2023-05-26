@@ -8,12 +8,12 @@ import view.animations.shootingBalls;
 
 public class Ball extends Circle {
     private final int ballNumber;
-    private int ballIndex = 1;
+    private int ballIndex;
 
-    public Ball() {
-        super(400,750,20, Color.BLACK);
-        this.ballNumber = ballIndex;
-        ballIndex++;
+    public Ball(int index) {
+        super(500,950,20, Color.BLACK);
+        this.ballNumber = index;
+        this.setId(String.valueOf(index));
     }
 
     public int getBallNumber() {
@@ -37,8 +37,8 @@ public class Ball extends Circle {
         shootingBalls shootingAnimation = new shootingBalls(gamePane,(MainBall) gamePane.getChildren().get(0),(Ball) gamePane.getChildren().get(1));
         shootingAnimation.play();
 
-        Ball ball = new Ball();
-        BallComingFromDown ballComingFromDown = new BallComingFromDown(ball,gamePane);
-        ballComingFromDown.play();
+//        Ball ball = new Ball();
+//        BallComingFromDown ballComingFromDown = new BallComingFromDown(ball,gamePane);
+//        ballComingFromDown.play();
     }
 }

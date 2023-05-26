@@ -2,6 +2,7 @@ package view;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,6 +32,13 @@ public class NewGameMenu extends Application implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         comboBox.setValue("difficulty");
         comboBox.setItems(FXCollections.observableArrayList("easy","medium","hard"));
+        comboBox.setOnAction(this::setDifficulty);
+    }
+
+    private void setDifficulty(ActionEvent actionEvent) {
+        String difficulty = comboBox.getValue();
+        Controllers.userProfileController.setPlayerDifficulty(difficulty);
+
     }
 
     public void singlePlayerMode() throws Exception {

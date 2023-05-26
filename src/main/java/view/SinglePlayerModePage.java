@@ -30,13 +30,14 @@ public class SinglePlayerModePage extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Pane gamePane = FXMLLoader.load(SinglePlayerModePage.class.getResource("/FXML/singlePlayerPane.fxml"));
-        singlePlayerController.createPanel(gamePane);
+        singlePlayerController.setGamePane(gamePane);
+        singlePlayerController.createPanel();
         Scene scene = new Scene(gamePane);
         scene.setFill(Color.MINTCREAM);
         GameStage.setGameStage(primaryStage);
         GameStage.setStageScene(scene);
         GameStage.getGameStage().show();
-        singlePlayerController.setBall(gamePane);
+        singlePlayerController.setBall();
         sidebarNodes(gamePane);
         HBox hBox = new HBox();
         Text remainingBalls = new Text(360, 50, singlePlayerController.getCurrentPlayer()+ "'s remaining balls : "+20);

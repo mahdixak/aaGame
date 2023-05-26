@@ -7,6 +7,7 @@ import model.Ball;
 import model.MainBall;
 
 import static view.Controllers.gameController;
+import static view.Controllers.singlePlayerController;
 
 public class shootingBalls extends Transition {
     private final Pane gamePane;
@@ -26,14 +27,16 @@ public class shootingBalls extends Transition {
     @Override
     protected void interpolate(double frac) {
         double y = ball.getCenterY() - 10;
-        if (y<= mainBall.getCenterY() - mainBall.getRadius() - 50) {
-            gamePane.getChildren().remove(ball);
+        if (y<= mainBall.getCenterY() + mainBall.getRadius() + 150) {
+//            gamePane.getChildren().remove(ball);
+//            gameController.addBallLine(ball);
+            singlePlayerController.ballSetToMainBall(ball);
             this.stop();
         }
-        if (ball.getBoundsInParent().intersects(mainBall.getBoundsInParent())) {
-            System.out.println("hit the ball!");
-            System.exit(0);
-        }
+//        if (ball.getBoundsInParent().intersects(mainBall.getBoundsInParent())) {
+//            System.out.println("hit the ball!");
+//            System.exit(0);
+//        }
         ball.setCenterY(y);
         gameController.addHighCoreForShootingBall();
     }

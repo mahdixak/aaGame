@@ -16,7 +16,7 @@ public enum Avatar {
     avatar10(Avatar.class.getResource("/images/avatars/avatar10.png").toExternalForm()),
     avatar11(Avatar.class.getResource("/images/avatars/avatar11.png").toExternalForm()),
     avatar12(Avatar.class.getResource("/images/avatars/avatar12.png").toExternalForm()),
-//    uploadedAvatar(Avatar.class.getResource("").toExternalForm()),
+    uploadedAvatar(Avatar.class.getResource("").toExternalForm()),
     ;
 
     private String avatarUrl;
@@ -55,7 +55,11 @@ public enum Avatar {
         this.avatarUrl = avatarUrl;
     }
 
-//    public String setUploadedAvatar(String address) {
-//        TODO:
-//    }
+    public void setUploadedAvatar(String address) {
+        Avatar.uploadedAvatar.setAvatarUrl(address);
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
 }
