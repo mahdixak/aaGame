@@ -32,7 +32,7 @@ public class AccountDetails extends Application {
         userAvatar.setRadius(50);
         userAvatar.setFill(new ImagePattern(new Image(userProfileController.getPlayerAvatar())));
         Text highScore = new Text(userProfileController.getPlayerHighScore());
-        Text difficulty = new Text(userProfileController.getPlayerDifficulty());
+        Text difficulty = new Text(userProfileController.getPlayerDifficulty().getDifficulty());
         Button goBackButton = new Button();
         goBackButton.setText("Back");
         goBackButton.setOnMouseClicked(mouseEvent -> {

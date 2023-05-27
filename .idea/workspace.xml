@@ -7,21 +7,27 @@
     <list default="true" id="0909396e-34d8-4ccc-8c09-a655c225fc76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationAndLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationAndLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SinglePlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SinglePlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Avatar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BallLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BallLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/BallLine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Difficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Difficulty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GameDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GameDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/MainBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MainBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AvatarMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AvatarMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/GuestMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GuestMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/NewGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewGameMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/PasswordChangeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PasswordChangeMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/SinglePlayerModePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/SinglePlayerModePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/UsernameChangeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/UsernameChangeMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/animations/CyclingBalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/animations/CyclingBalls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/animations/shootingBalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/animations/shootingBalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/startGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/startGame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/passwordChangeMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/passwordChangeMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
-        <option value="FxmlFile" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -99,6 +105,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PauseMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.PauseMenu" />
+      <module name="AA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SinglePlayerModePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.SinglePlayerModePage" />
       <module name="AA" />
@@ -128,6 +147,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartMenu" />
+        <item itemvalue="Application.PauseMenu" />
         <item itemvalue="Application.SinglePlayerModePage" />
         <item itemvalue="Application.AvatarMenu" />
       </list>
@@ -164,7 +184,15 @@
       <workItem from="1684855789537" duration="7560000" />
       <workItem from="1684993180983" duration="125000" />
       <workItem from="1684993688477" duration="15607000" />
-      <workItem from="1685099705081" duration="12850000" />
+      <workItem from="1685099705081" duration="13562000" />
+      <workItem from="1685178439612" duration="342000" />
+      <workItem from="1685178959618" duration="566000" />
+      <workItem from="1685179635183" duration="508000" />
+      <workItem from="1685180198906" duration="1369000" />
+      <workItem from="1685182445682" duration="2530000" />
+      <workItem from="1685185107623" duration="2335000" />
+      <workItem from="1685191318187" duration="765000" />
+      <workItem from="1685200520683" duration="3164000" />
     </task>
     <servers />
   </component>
@@ -187,7 +215,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/aaGame$StartMenu.ic" NAME="StartMenu Coverage Results" MODIFIED="1684697011098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/aaGame$StartMenu.ic" NAME="StartMenu Coverage Results" MODIFIED="1685179724822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>view.controllers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/aaGame$SinglePlayerModePage.ic" NAME="SinglePlayerModePage Coverage Results" MODIFIED="1684696984916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -38,7 +38,7 @@ public class NewGameMenu extends Application implements Initializable {
     private void setDifficulty(ActionEvent actionEvent) {
         String difficulty = comboBox.getValue();
         Controllers.userProfileController.setPlayerDifficulty(difficulty);
-
+        Controllers.singlePlayerController.setBallsRemaining(Controllers.userProfileController.getPlayerDifficulty().getNumberOfBalls());
     }
 
     public void singlePlayerMode() throws Exception {

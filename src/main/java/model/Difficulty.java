@@ -9,7 +9,7 @@ public enum Difficulty {
     private final String difficulty;
     private final int difficultyIndex;
     private final int highScoreForEachShoot;
-    private final int frizeTime;
+    private final int friezeTime;
     private final int numberOfBalls;
     private final double windSpeed;
     private final int spinSpeed;
@@ -19,7 +19,7 @@ public enum Difficulty {
         this.difficulty = difficulty;
         this.difficultyIndex = difficultyIndex;
         this.highScoreForEachShoot = highScoreForEachShoot;
-        this.frizeTime = friezeTime;
+        this.friezeTime = friezeTime;
         this.numberOfBalls = numberOfBalls;
         this.windSpeed = windSpeed;
         this.spinSpeed = spinSpeed;
@@ -55,8 +55,8 @@ public enum Difficulty {
         return highScoreForEachShoot;
     }
 
-    public int getFrizeTime() {
-        return frizeTime;
+    public int getFriezeTime() {
+        return friezeTime;
     }
 
     public int getNumberOfBalls() {
@@ -70,4 +70,16 @@ public enum Difficulty {
     public int getSpinSpeed() {
         return spinSpeed;
     }
+
+    public static int findBallsWithDifficulty(String difficulty) {
+        if (difficulty.equals("easy")) {
+            return EASY.getNumberOfBalls();
+        } else if (difficulty.equals("medium")) {
+            return MEDIUM.getNumberOfBalls();
+        } else if (difficulty.equals("hard")){
+            return HARD.getNumberOfBalls();
+        }
+        return 0;
+    }
+
 }

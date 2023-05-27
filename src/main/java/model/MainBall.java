@@ -8,7 +8,7 @@ public class MainBall extends Circle {
     private Text userHighScore;
 
     public MainBall() {
-        super(500, 300, 150, Color.BLACK);
+        super(500, 300, 120, Color.BLACK);
     }
 
     public Text getUserHighScore() {

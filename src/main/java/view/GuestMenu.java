@@ -7,10 +7,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.Difficulty;
 import model.GameStage;
 import static view.Controllers.*;
 
@@ -38,15 +40,21 @@ public class GuestMenu extends Application implements Initializable {
 
     private void setDifficulty(ActionEvent actionEvent) {
         String difficulty = comboBox.getValue();
-        Controllers.userProfileController.setPlayerDifficulty(difficulty);
-
+        singlePlayerController.setBallsRemaining(Difficulty.findBallsWithDifficulty(difficulty));
     }
 
     public void singlePlayerMode() throws Exception {
-        SinglePlayerModePage singlePlayerModePage = new SinglePlayerModePage();
-        singlePlayerController.setCurrentPlayer("guest");
-        gameController.setPlayerUsername("guest");
-        singlePlayerModePage.start(GameStage.getGameStage());
+        if (singlePlayerController.getBallsRemaining()!=0) {
+            SinglePlayerModePage singlePlayerModePage = new SinglePlayerModePage();
+            singlePlayerController.setCurrentPlayer("guest");
+            gameController.setPlayerUsername("guest");
+            singlePlayerModePage.start(GameStage.getGameStage());
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error while entering game");
+            alert.setContentText("you most select the difficulty first");
+            alert.showAndWait();
+        }
     }
 
     public void playWithFriend() throws Exception {

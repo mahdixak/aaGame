@@ -27,11 +27,12 @@ public class shootingBalls extends Transition {
     @Override
     protected void interpolate(double frac) {
         double y = ball.getCenterY() - 10;
-        if (y<= mainBall.getCenterY() + mainBall.getRadius() + 150) {
+        if (y<= mainBall.getCenterY() + mainBall.getRadius() + 130) {
 //            gamePane.getChildren().remove(ball);
 //            gameController.addBallLine(ball);
             singlePlayerController.ballSetToMainBall(ball);
             this.stop();
+            new CyclingBalls(ball,mainBall,gamePane).ballRotation();
         }
 //        if (ball.getBoundsInParent().intersects(mainBall.getBoundsInParent())) {
 //            System.out.println("hit the ball!");

@@ -2,6 +2,7 @@ package view;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -36,8 +37,15 @@ public class AccountSettings extends Application implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        comboBox.setValue("difficulty");
+        comboBox.setValue("change difficulty");
         comboBox.setItems(FXCollections.observableArrayList("easy","medium","hard"));
+        comboBox.setOnAction(this::setDifficulty);
+    }
+
+    private void setDifficulty(ActionEvent actionEvent) {
+        String difficulty = comboBox.getValue();
+        Controllers.userProfileController.setPlayerDifficulty(difficulty);
+        Controllers.singlePlayerController.setBallsRemaining(Controllers.userProfileController.getPlayerDifficulty().getNumberOfBalls());
     }
 
     public void showHighScore() {
@@ -52,11 +60,6 @@ public class AccountSettings extends Application implements Initializable {
             userProfileController.deleteAccount();
             new StartMenu().start(GameStage.getGameStage());
         }
-    }
-
-    public void changeGameDifficulty(InputMethodEvent mouseEvent) {
-        //TODO:
-        ComboBox<String> comboBox1 = (ComboBox<String>) mouseEvent.getSource();
     }
 
     public void goBack() throws Exception {

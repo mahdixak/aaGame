@@ -16,11 +16,7 @@ import static view.Controllers.userProfileController;
 
 public class UsernameChangeMenu extends Application {
     @FXML
-    private PasswordField newPassword;
-    @FXML
     private TextField newUsername;
-    @FXML
-    private TextField username;
     @FXML
     private PasswordField password;
 
@@ -41,22 +37,14 @@ public class UsernameChangeMenu extends Application {
         UserProfileStatus status = userProfileController.changePlayerUsernameCheck(newUsername.getText(), password.getText());
         if (status.equals(UserProfileStatus.ALL_ELEMENTS_ARE_VALID)) {
             userProfileController.changeUsername(newUsername.getText());
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("password changed successfully");
+            alert.setContentText("you password changed successfully!");
+            alert.showAndWait();
+            new AccountSettings().start(GameStage.getGameStage());
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error while changing username");
-            alert.setContentText(status.getStatus());
-            alert.showAndWait();
-        }
-    }
-
-    public void changingPlayerPassword() throws Exception {
-        userProfileController.setCurrentPlayer(username.getText());
-        UserProfileStatus status = userProfileController.changePlayerPasswordCheck(username.getText(), password.getText(), newPassword.getText());
-        if (status.equals(UserProfileStatus.ALL_ELEMENTS_ARE_VALID)) {
-            userProfileController.changePassword(newPassword.getText());
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error while changing password!");
             alert.setContentText(status.getStatus());
             alert.showAndWait();
         }

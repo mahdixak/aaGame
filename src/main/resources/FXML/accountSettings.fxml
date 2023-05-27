@@ -18,7 +18,7 @@
             <Button text="Change Password" onMouseClicked="#changePlayerPassword" />
             <Button text="High-score" onMouseClicked="#showHighScore"/>
             <Button text="Delete Account"  onMouseClicked="#deleteAccount"/>
-            <ComboBox fx:id="comboBox" onInputMethodTextChanged="#changeGameDifficulty"/>
+            <ComboBox fx:id="comboBox"/>
             <Button text="back" onMouseClicked="#goBack" />
         </VBox>
     </center>

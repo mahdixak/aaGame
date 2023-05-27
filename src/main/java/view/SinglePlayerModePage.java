@@ -49,33 +49,23 @@ public class SinglePlayerModePage extends Application {
 
     private void sidebarNodes(Pane pane) {
         VBox sideBar = new VBox();
-        sideBar.setLayoutX(720);
-        sideBar.setLayoutY(400);
+        sideBar.setLayoutX(830);
+        sideBar.setLayoutY(500);
         sideBar.setSpacing(20);
-        sideBar.setAlignment(Pos.CENTER_RIGHT);
-        Button backToMainMenu = new Button();
-        backToMainMenu.setText("back");
-        backToMainMenu.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        sideBar.setAlignment(Pos.TOP_RIGHT);
+        Button pause = new Button();
+        pause.setText("pause");
+        pause.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 try {
-                    new UserMenu().start(GameStage.getGameStage());
+                    new PauseMenu().start(GameStage.getGameStage());
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
             }
         });
-        sideBar.getChildren().add(backToMainMenu);
-        Button exitFromGame = new Button();
-        exitFromGame.setText("exit");
-        exitFromGame.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                System.out.println("exiting from game");
-                System.exit(0);
-            }
-        });
-        sideBar.getChildren().add(exitFromGame);
+        sideBar.getChildren().add(pause);
         pane.getChildren().add(sideBar);
     }
 

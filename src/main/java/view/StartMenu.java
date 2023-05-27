@@ -3,24 +3,21 @@ package view;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import model.GameStage;
 
-import java.net.URL;
 import java.util.Objects;
-import java.util.ResourceBundle;
 
 import static view.Controllers.jsonController;
 
 
-public class StartMenu extends Application implements Initializable {
+public class StartMenu extends Application {
     @FXML
     private ToggleButton toggleButtonMute;
     @FXML
@@ -38,17 +35,22 @@ public class StartMenu extends Application implements Initializable {
         mediaPlayer.setAutoPlay(true);
         BorderPane borderPane = FXMLLoader.load(Objects.requireNonNull(StartMenu.class.getResource("/FXML/startGame.fxml")));
         Scene scene = new Scene(borderPane);
+//        scene.setUserAgentStylesheet(getClass().getResource("/CSS/style1(1).css").toExternalForm());
         setScene(scene);
         GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
         GameStage.getGameStage().show();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-//        ToggleButton button = new ToggleButton();
-//        button.set
-    }
+//    @FXML
+//    public void initialize() {
+//        Image image = new Image(SinglePlayerController.class.getResource("/images/icon.png").toExternalForm(),800,800,false,false);
+//        BackgroundImage backgroundImage =  new BackgroundImage(image, BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+//        Background background = new Background(backgroundImage);
+//        toggleButtonMute.setBackground(background);
+////        ToggleButton button = new ToggleButton();
+////        button.set
+//    }
 
     public void registrationPage() throws Exception {
         RegistrationMenu registrationMenu = new RegistrationMenu();

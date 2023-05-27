@@ -8,7 +8,6 @@ import view.enums.status.UserProfileStatus;
 public class UserProfileController {
     private User currentPlayer ;
 
-
     public void setCurrentPlayer(String currentPlayerName) {
         this.currentPlayer = User.findUserWithUsername(currentPlayerName);
     }
@@ -35,8 +34,8 @@ public class UserProfileController {
         return String.valueOf(currentPlayer.getHighScore());
     }
 
-    public String getPlayerDifficulty() {
-        return currentPlayer.getDifficulty().getDifficulty();
+    public Difficulty getPlayerDifficulty() {
+        return currentPlayer.getDifficulty();
     }
 
     public UserProfileStatus changePlayerUsernameCheck(String newUsername, String userPassword) {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.PauseMenu"
+            prefHeight="1000.0" prefWidth="1000.0">
+    <center>
+        <VBox spacing="30" alignment="CENTER" >
+            <Button text="resume" onMouseClicked="#resumeGame"/>
+            <Button text="restart new game" onMouseClicked="#restartNewGame"/>
+            <Button text="show key buildings" onMouseClicked="#keyBuildingsShow"/>
+            <Button text="settings" onMouseClicked="#settings"/>
+            <Button text="back to main menu" onMouseClicked="#backToGameMenu"/>
+            <Button text="exit the game" onMouseClicked="#ExitTheGame"/>
+        </VBox>
+    </center>
+</BorderPane>
