@@ -24,6 +24,7 @@ public class NewGameMenu extends Application implements Initializable {
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = FXMLLoader.load(NewGameMenu.class.getResource("/FXML/newGameMenu.fxml"));
         Scene scene = new Scene(borderPane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
         GameStage.getGameStage().show();

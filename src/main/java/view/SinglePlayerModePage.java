@@ -33,6 +33,7 @@ public class SinglePlayerModePage extends Application {
         singlePlayerController.setGamePane(gamePane);
         singlePlayerController.createPanel();
         Scene scene = new Scene(gamePane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         scene.setFill(Color.MINTCREAM);
         GameStage.setGameStage(primaryStage);
         GameStage.setStageScene(scene);

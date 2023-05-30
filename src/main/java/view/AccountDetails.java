@@ -53,6 +53,7 @@ public class AccountDetails extends Application {
         vBox.getChildren().add(difficulty);
         vBox.getChildren().add(goBackButton);
         Scene scene = new Scene(borderPane,800,800);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
         GameStage.getGameStage().show();

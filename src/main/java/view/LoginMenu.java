@@ -27,6 +27,7 @@ public class LoginMenu extends Application {
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = FXMLLoader.load(LoginMenu.class.getResource("/FXML/loginMenu.fxml"));
         Scene scene = new Scene(borderPane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setStageScene(scene);
         GameStage.setGameStage(stage);
         GameStage.getGameStage().show();

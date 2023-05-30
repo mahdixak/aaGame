@@ -30,6 +30,7 @@ public class AccountSettings extends Application implements Initializable {
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = FXMLLoader.load(AccountSettings.class.getResource("/FXML/accountSettings.fxml"));
         Scene scene = new Scene(borderPane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setStageScene(scene);
         GameStage.setGameStage(stage);
         GameStage.getGameStage().show();

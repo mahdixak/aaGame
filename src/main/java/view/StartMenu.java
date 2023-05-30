@@ -11,6 +11,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import model.GameStage;
+import model.Themes;
 
 import java.util.Objects;
 
@@ -23,6 +24,8 @@ public class StartMenu extends Application {
     @FXML
     private ToggleButton toggleButtonTheme;
     private static Scene scene;
+
+    private static MediaPlayer mediaPlayer;
     public static void main(String[] args) throws Exception {
         jsonController.checkJsonDirectory();
         launch(args);
@@ -31,11 +34,12 @@ public class StartMenu extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Media media = new Media(getClass().getResource("/media/bgsong1.wav").toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.setAutoPlay(true);
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
         BorderPane borderPane = FXMLLoader.load(Objects.requireNonNull(StartMenu.class.getResource("/FXML/startGame.fxml")));
         Scene scene = new Scene(borderPane);
-//        scene.setUserAgentStylesheet(getClass().getResource("/CSS/style1(1).css").toExternalForm());
+        GameStage.setCurrentTheme(Themes.Light);
+        scene.setUserAgentStylesheet(Themes.Light.getTheme());
         setScene(scene);
         GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
@@ -69,26 +73,31 @@ public class StartMenu extends Application {
         System.exit(0);
     }
 
-    public void changeTheme(MouseEvent mouseEvent) {
+    public void changeTheme() {
         if (toggleButtonTheme.getText().equals("dark theme")) {
-            scene.setUserAgentStylesheet(getClass().getResource("/CSS/darkTheme.css").toExternalForm());
+            scene.setUserAgentStylesheet(Themes.Dark.getTheme());
+            GameStage.setCurrentTheme(Themes.Dark);
             toggleButtonTheme.setText("light theme");
             return;
         }
         if (toggleButtonTheme.getText().equals("light theme")) {
-            scene.setUserAgentStylesheet(null);
+            scene.setUserAgentStylesheet(Themes.Light.getTheme());
+            GameStage.setCurrentTheme(Themes.Light);
             toggleButtonTheme.setText("dark theme");
         }
     }
 
     public void muteMusic(MouseEvent mouseEvent) {
         if (toggleButtonMute.getText().equals("mute music")) {
-            //muting song
+            mediaPlayer.setAutoPlay(false);
+            mediaPlayer.pause();
             toggleButtonMute.setText("unmute music");
             return;
         }
         if (toggleButtonMute.getText().equals("unmute music")) {
-            //play song
+            Media media = new Media(getClass().getResource("/media/bgsong2.wav").toString());
+            mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.play();
             toggleButtonMute.setText("mute music");
         }
     }

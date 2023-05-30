@@ -44,7 +44,7 @@ public class SinglePlayerController {
     public void setBall() {
         if (ballsRemaining == 0) {
             System.out.println("game is over!");
-            System.exit(0);
+//            System.exit(0);
         }
         Ball ball = new Ball(ballsRemaining);
         ballsRemaining--;

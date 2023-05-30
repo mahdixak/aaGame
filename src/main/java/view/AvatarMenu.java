@@ -58,6 +58,7 @@ public class AvatarMenu extends Application {
         URL url = AvatarMenu.class.getResource("/FXML/avatarMenu.fxml");
         BorderPane borderPane = FXMLLoader.load(url);
         Scene scene = new Scene(borderPane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setStageScene(scene);
         GameStage.setGameStage(stage);
         GameStage.getGameStage().show();

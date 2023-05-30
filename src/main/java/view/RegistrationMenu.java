@@ -25,6 +25,7 @@ public class RegistrationMenu extends Application {
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = FXMLLoader.load(RegistrationMenu.class.getResource("/FXML/registrationMenu.fxml"));
         Scene scene = new Scene(borderPane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
         GameStage.getGameStage().show();

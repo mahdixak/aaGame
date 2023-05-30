@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AA:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0909396e-34d8-4ccc-8c09-a655c225fc76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Themes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CSS/lightTheme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SinglePlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SinglePlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BallLine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Difficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Difficulty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/GameDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GameDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MainBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MainBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GameStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GameStage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/AvatarMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AvatarMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/GuestMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GuestMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/HighScoreMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HighScoreMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/NewGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewGameMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/PasswordChangeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PasswordChangeMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/PauseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PauseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/RegistrationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/RegistrationMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/SinglePlayerModePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/SinglePlayerModePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/UserMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/UsernameChangeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/UsernameChangeMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/animations/CyclingBalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/animations/CyclingBalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/animations/shootingBalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/animations/shootingBalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/style1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/accountSettings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/passwordChangeMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/passwordChangeMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/darkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS/darkTheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/style1(1).css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/media/bgsong2.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/media/bgsong2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/media/bgsong3.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/media/bgsong3.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +45,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -61,23 +69,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mahdi.ak/Documents/GitHub/aaGame&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mahdi.ak/Desktop",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="view" />
@@ -192,7 +203,10 @@
       <workItem from="1685182445682" duration="2530000" />
       <workItem from="1685185107623" duration="2335000" />
       <workItem from="1685191318187" duration="765000" />
-      <workItem from="1685200520683" duration="3164000" />
+      <workItem from="1685200520683" duration="3358000" />
+      <workItem from="1685296668064" duration="1187000" />
+      <workItem from="1685452986424" duration="1723000" />
+      <workItem from="1685474996469" duration="1620000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,8 @@ import view.StartMenu;
 
 public class GameStage{
     private static Stage gameStage;
+    private static Themes currentTheme;
+
 
     public static Stage getGameStage() {
         return gameStage;
@@ -22,5 +24,13 @@ public class GameStage{
     }
     public static void setStageScene(Scene scene) {
         gameStage.setScene(scene);
+    }
+
+    public static Themes getCurrentTheme() {
+        return currentTheme;
+    }
+
+    public static void setCurrentTheme(Themes currentTheme) {
+        GameStage.currentTheme = currentTheme;
     }
 }

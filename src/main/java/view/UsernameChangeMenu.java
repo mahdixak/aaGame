@@ -25,6 +25,7 @@ public class UsernameChangeMenu extends Application {
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = FXMLLoader.load(UsernameChangeMenu.class.getResource("/FXML/usernameChangeMenu.fxml"));
         Scene scene = new Scene(borderPane);
+        scene.setUserAgentStylesheet(GameStage.getCurrentTheme().getTheme());
         GameStage.setGameStage(stage);
         GameStage.setStageScene(scene);
         GameStage.getGameStage().show();
