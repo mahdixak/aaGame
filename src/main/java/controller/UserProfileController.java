@@ -6,11 +6,12 @@ import model.User;
 import view.enums.status.UserProfileStatus;
 
 public class UserProfileController {
-    private User currentPlayer ;
+    private final User currentPlayer ;
 
-    public void setCurrentPlayer(String currentPlayerName) {
-        this.currentPlayer = User.findUserWithUsername(currentPlayerName);
+    public UserProfileController(String currentPlayer) {
+        this.currentPlayer = User.findUserWithUsername(currentPlayer);
     }
+
     public void deleteAccount() throws Exception {
         currentPlayer.setUsername("");
         currentPlayer.setPassword("");

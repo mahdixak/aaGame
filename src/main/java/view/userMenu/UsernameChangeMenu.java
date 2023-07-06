@@ -1,5 +1,6 @@
-package view;
+package view.userMenu;
 
+import controller.UserProfileController;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,9 +13,9 @@ import javafx.stage.Stage;
 import model.GameStage;
 import view.enums.status.UserProfileStatus;
 
-import static view.Controllers.userProfileController;
 
 public class UsernameChangeMenu extends Application {
+    UserProfileController userProfileController = AccountSettings.getUserProfileController();
     @FXML
     private TextField newUsername;
     @FXML
@@ -31,8 +32,7 @@ public class UsernameChangeMenu extends Application {
         GameStage.getGameStage().show();
     }
     public void goBackToAccountSettings() throws Exception {
-        AccountSettings accountSettings = new AccountSettings();
-        accountSettings.start(GameStage.getGameStage());
+        new AccountSettings().start(GameStage.getGameStage());
     }
     public void changingPlayerUsername() throws Exception {
         UserProfileStatus status = userProfileController.changePlayerUsernameCheck(newUsername.getText(), password.getText());

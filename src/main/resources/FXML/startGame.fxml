@@ -9,7 +9,7 @@
 <?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.StartMenu"
+            fx:controller="view.userMenu.StartMenu"
             stylesheets="@../CSS/style.css"
             styleClass="BackGround"
             prefHeight="800.0" prefWidth="800.0" >

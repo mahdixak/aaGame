@@ -1,30 +1,30 @@
-package view;
+package view.userMenu;
 
+import controller.JsonController;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import model.GameStage;
 import model.Themes;
+import view.GuestMenu;
 
 import java.util.Objects;
 
-import static view.Controllers.jsonController;
 
 
 public class StartMenu extends Application {
+    static JsonController jsonController = new JsonController();
     @FXML
     private ToggleButton toggleButtonMute;
     @FXML
     private ToggleButton toggleButtonTheme;
     private static Scene scene;
-
     private static MediaPlayer mediaPlayer;
     public static void main(String[] args) throws Exception {
         jsonController.checkJsonDirectory();
@@ -57,8 +57,7 @@ public class StartMenu extends Application {
 //    }
 
     public void registrationPage() throws Exception {
-        RegistrationMenu registrationMenu = new RegistrationMenu();
-        registrationMenu.start(GameStage.getGameStage());
+        new RegistrationMenu().start(GameStage.getGameStage());
     }
 
     public void loginPage() throws Exception {
@@ -87,7 +86,7 @@ public class StartMenu extends Application {
         }
     }
 
-    public void muteMusic(MouseEvent mouseEvent) {
+    public void muteMusic() {
         if (toggleButtonMute.getText().equals("mute music")) {
             mediaPlayer.setAutoPlay(false);
             mediaPlayer.pause();

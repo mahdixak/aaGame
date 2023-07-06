@@ -1,16 +1,12 @@
 package view;
 
 import controller.SinglePlayerController;
-import controller.UserProfileController;
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -18,15 +14,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.GameStage;
-import static view.Controllers.*;
-
-
-import java.io.IOException;
-
-import static view.Controllers.singlePlayerController;
-import static view.Controllers.userProfileController;
+import view.userMenu.UserMenu;
 
 public class SinglePlayerModePage extends Application {
+    SinglePlayerController singlePlayerController = new SinglePlayerController(UserMenu.getUsername());
     @Override
     public void start(Stage primaryStage) throws Exception {
         Pane gamePane = FXMLLoader.load(SinglePlayerModePage.class.getResource("/FXML/singlePlayerPane.fxml"));
@@ -56,14 +47,11 @@ public class SinglePlayerModePage extends Application {
         sideBar.setAlignment(Pos.TOP_RIGHT);
         Button pause = new Button();
         pause.setText("pause");
-        pause.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                try {
-                    new PauseMenu().start(GameStage.getGameStage());
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
+        pause.setOnMouseClicked(mouseEvent -> {
+            try {
+                new PauseMenu().start(GameStage.getGameStage());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
         });
         sideBar.getChildren().add(pause);

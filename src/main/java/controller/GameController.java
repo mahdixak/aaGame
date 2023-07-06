@@ -2,22 +2,19 @@ package controller;
 
 import javafx.scene.layout.Pane;
 import model.Ball;
-import model.GameStage;
 import model.MainBall;
 import model.User;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 public class GameController {
-    private User currentPlayer;
+    private final User currentPlayer;
 
-    public void setPlayerUsername(String playerUsername) {
-        if (playerUsername.equals("guest"))
+    public GameController(String currentPlayer) {
+        if (currentPlayer.equals("guest"))
             this.currentPlayer = new User("guest","guest123");
         else
-            this.currentPlayer = User.findUserWithUsername(playerUsername);
+            this.currentPlayer = User.findUserWithUsername(currentPlayer);
     }
 
     public User getPlayerUsername() {

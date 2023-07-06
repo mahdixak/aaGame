@@ -1,5 +1,6 @@
 package view;
 
+import controller.SinglePlayerController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -14,12 +15,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.Difficulty;
 import model.GameStage;
-import static view.Controllers.*;
+import view.userMenu.StartMenu;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class GuestMenu extends Application implements Initializable {
+    SinglePlayerController singlePlayerController = new SinglePlayerController("guest");
     @FXML
     private ComboBox<String> comboBox;
 
@@ -47,8 +49,6 @@ public class GuestMenu extends Application implements Initializable {
     public void singlePlayerMode() throws Exception {
         if (singlePlayerController.getBallsRemaining()!=0) {
             SinglePlayerModePage singlePlayerModePage = new SinglePlayerModePage();
-            singlePlayerController.setCurrentPlayer("guest");
-            gameController.setPlayerUsername("guest");
             singlePlayerModePage.start(GameStage.getGameStage());
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);

@@ -12,19 +12,19 @@ import model.MainBall;
 import model.User;
 
 public class SinglePlayerController {
-    private User currentPlayer;
+    private final User currentPlayer;
     private Pane gamePane;
     private int ballsRemaining;
 
-    public String getCurrentPlayer() {
-        return currentPlayer.getUsername();
-    }
-
-    public void setCurrentPlayer(String currentPlayerName) {
-        if (currentPlayerName.equals("guest"))
+    public SinglePlayerController(String currentPlayer) {
+        if (currentPlayer.equals("guest"))
             this.currentPlayer = new User("guest", "guest123");
         else
-            this.currentPlayer = User.findUserWithUsername(currentPlayerName);
+            this.currentPlayer = User.findUserWithUsername(currentPlayer);
+    }
+
+    public String getCurrentPlayer() {
+        return currentPlayer.getUsername();
     }
 
     public void createPanel() {
@@ -60,7 +60,6 @@ public class SinglePlayerController {
                     ball.moveRight();
                 else if (keyName.equals("Up") || keyName.equals("Space")) {
                     ball.shoot(gamePane);
-                    System.out.println(ball.getBallNumber());
                     System.out.println(ballsRemaining);
                     setBall();
                 }

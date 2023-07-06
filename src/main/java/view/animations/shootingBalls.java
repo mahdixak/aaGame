@@ -1,15 +1,18 @@
 package view.animations;
 
+import controller.GameController;
+import controller.SinglePlayerController;
 import javafx.animation.Transition;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import model.Ball;
 import model.MainBall;
+import view.userMenu.UserMenu;
 
-import static view.Controllers.gameController;
-import static view.Controllers.singlePlayerController;
 
 public class shootingBalls extends Transition {
+    SinglePlayerController singlePlayerController = new SinglePlayerController(UserMenu.getUsername());
+    GameController gameController = new GameController(UserMenu.getUsername());
     private final Pane gamePane;
     private final MainBall mainBall;
     private final Ball ball;

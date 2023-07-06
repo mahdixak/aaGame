@@ -5,13 +5,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import model.Avatar;
 import model.User;
-import view.Controllers;
 import view.enums.status.RegisterationAndLoginStatus;
 
 import java.net.MalformedURLException;
-import java.net.URL;
-
-import static view.Controllers.userProfileController;
 
 public class RegistrationAndLoginController {
     private String currentUsername;
@@ -50,7 +46,6 @@ public class RegistrationAndLoginController {
     public void setUserAvatar(Circle circle) {
         User user = User.findUserWithUsername(this.currentUsername);
         user.setAvatar(circle.getId());
-        userProfileController.setCurrentPlayer(user.getUsername());
         JsonController.setUserInformationToJson();
     }
 

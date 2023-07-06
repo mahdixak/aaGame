@@ -7,6 +7,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.GameStage;
+import view.userMenu.AccountSettings;
+import view.userMenu.UserMenu;
 
 public class PauseMenu extends Application {
     @Override

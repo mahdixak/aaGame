@@ -7,4 +7,6 @@ module com.example.aa {
 
     exports view;
     opens view to javafx.fxml;
+    exports view.userMenu;
+    opens view.userMenu to javafx.fxml;
 }

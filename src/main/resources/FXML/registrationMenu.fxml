@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.RegistrationMenu"
+            fx:controller="view.userMenu.RegistrationMenu"
             prefHeight="800.0" prefWidth="800.0">
     <center>
         <VBox alignment="CENTER" spacing="20">

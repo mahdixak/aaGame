@@ -3,24 +3,15 @@ package model;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
-import view.Controllers;
-import view.animations.BallComingFromDown;
 import view.animations.shootingBalls;
 
 public class Ball extends Circle {
-    private final int ballNumber;
-    private Line line;
-    private int ballIndex;
+    private final int ballIndex;
 
     public Ball(int index) {
         super(500,950,20, Color.BLACK);
-        this.ballNumber = index;
+        this.ballIndex = index;
         this.setId(String.valueOf(index));
-    }
-
-    public int getBallNumber() {
-        return ballNumber;
     }
 
     public void moveLeft() {
@@ -45,9 +36,5 @@ public class Ball extends Circle {
 //        Ball ball = new Ball();
 //        BallComingFromDown ballComingFromDown = new BallComingFromDown(ball,gamePane);
 //        ballComingFromDown.play();
-    }
-
-    public void setBallLine(Line line) {
-        this.line = line;
     }
 }

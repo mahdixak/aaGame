@@ -1,5 +1,6 @@
-package view;
+package view.userMenu;
 
+import controller.UserProfileController;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,9 +13,9 @@ import javafx.stage.Stage;
 import model.GameStage;
 import view.enums.status.UserProfileStatus;
 
-import static view.Controllers.userProfileController;
 
 public class PasswordChangeMenu extends Application {
+    UserProfileController userProfileController = AccountSettings.getUserProfileController();
     @FXML
     private PasswordField newPassword;
     @FXML
@@ -32,12 +33,10 @@ public class PasswordChangeMenu extends Application {
         GameStage.getGameStage().show();
     }
     public void goBackToAccountSettings() throws Exception {
-        AccountSettings accountSettings = new AccountSettings();
-        accountSettings.start(GameStage.getGameStage());
+        new AccountSettings().start(GameStage.getGameStage());
     }
 
     public void changingPlayerPassword() throws Exception {
-        userProfileController.setCurrentPlayer(username.getText());
         UserProfileStatus status = userProfileController.changePlayerPasswordCheck(username.getText(), password.getText(), newPassword.getText());
         if (status.equals(UserProfileStatus.ALL_ELEMENTS_ARE_VALID)) {
             userProfileController.changePassword(newPassword.getText());

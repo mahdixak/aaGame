@@ -3,7 +3,7 @@ package model;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import view.StartMenu;
+import view.userMenu.StartMenu;
 
 public class GameStage{
     private static Stage gameStage;

@@ -1,5 +1,6 @@
-package view;
+package view.userMenu;
 
+import controller.RegistrationAndLoginController;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +13,9 @@ import javafx.stage.Stage;
 import model.GameStage;
 import view.enums.status.RegisterationAndLoginStatus;
 
-import static view.Controllers.*;
-
 
 public class RegistrationMenu extends Application {
+    static RegistrationAndLoginController registrationAndLoginController = new RegistrationAndLoginController();
     @FXML
     private PasswordField password;
     @FXML
@@ -37,8 +37,7 @@ public class RegistrationMenu extends Application {
             status = registrationAndLoginController.checkPasswordField(password.getText());
             if (status.equals(RegisterationAndLoginStatus.PASSWORD_CHECKED_SUCCESSFULLY)) {
                 registrationAndLoginController.signingUser(password.getText());
-                AvatarMenu avatarMenu = new AvatarMenu();
-                avatarMenu.start(GameStage.getGameStage());
+                new AvatarMenu().start(GameStage.getGameStage());
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error while signing up!");
@@ -64,4 +63,7 @@ public class RegistrationMenu extends Application {
         new StartMenu().start(GameStage.getGameStage());
     }
 
+    public static RegistrationAndLoginController getRegistrationAndLoginController() {
+        return registrationAndLoginController;
+    }
 }

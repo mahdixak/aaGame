@@ -1,26 +1,22 @@
-package view;
+package view.userMenu;
 
 import controller.UserProfileController;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import model.Avatar;
 import model.GameStage;
 
-import static view.Controllers.userProfileController;
-
 public class AccountDetails extends Application {
+    UserProfileController userProfileController = AccountSettings.getUserProfileController();
     @Override
     public void start(Stage stage) throws Exception {
         BorderPane borderPane = new BorderPane();
@@ -60,7 +56,6 @@ public class AccountDetails extends Application {
     }
 
     public void goBack() throws Exception {
-        AccountSettings accountSettings = new AccountSettings();
-        accountSettings.start(GameStage.getGameStage());
+        new AccountSettings().start(GameStage.getGameStage());
     }
 }

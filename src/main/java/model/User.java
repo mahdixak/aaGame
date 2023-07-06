@@ -74,7 +74,6 @@ public class User {
     public void setAvatar(Avatar avatar) {
         this.avatar = avatar;
     }
-
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
     }

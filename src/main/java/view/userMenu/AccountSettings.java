@@ -1,5 +1,6 @@
-package view;
+package view.userMenu;
 
+import controller.UserProfileController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -8,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.input.InputMethodEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.GameStage;
@@ -19,10 +17,9 @@ import model.GameStage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static view.Controllers.currentPlayer;
-import static view.Controllers.userProfileController;
 
 public class AccountSettings extends Application implements Initializable {
+    static UserProfileController userProfileController = new UserProfileController(UserMenu.getUsername());
     @FXML
     private ComboBox<String> comboBox;
 
@@ -45,8 +42,8 @@ public class AccountSettings extends Application implements Initializable {
 
     private void setDifficulty(ActionEvent actionEvent) {
         String difficulty = comboBox.getValue();
-        Controllers.userProfileController.setPlayerDifficulty(difficulty);
-        Controllers.singlePlayerController.setBallsRemaining(Controllers.userProfileController.getPlayerDifficulty().getNumberOfBalls());
+        userProfileController.setPlayerDifficulty(difficulty);
+//        singlePlayerController.setBallsRemaining(Controllers.userProfileController.getPlayerDifficulty().getNumberOfBalls());
     }
 
     public void showHighScore() {
@@ -64,22 +61,22 @@ public class AccountSettings extends Application implements Initializable {
     }
 
     public void goBack() throws Exception {
-        UserMenu userMenu = new UserMenu();
-        userMenu.start(GameStage.getGameStage());
+        new UserMenu().start(GameStage.getGameStage());
     }
 
     public void accountDetails() throws Exception {
-        AccountDetails accountDetails = new AccountDetails();
-        accountDetails.start(GameStage.getGameStage());
+        new AccountDetails().start(GameStage.getGameStage());
     }
 
     public void changePlayerUsername() throws Exception {
-        UsernameChangeMenu usernameChangeMenu = new UsernameChangeMenu();
-            usernameChangeMenu.start(GameStage.getGameStage());
+        new UsernameChangeMenu().start(GameStage.getGameStage());
     }
 
     public void changePlayerPassword() throws Exception {
         new PasswordChangeMenu().start(GameStage.getGameStage());
     }
 
+    public static UserProfileController getUserProfileController() {
+        return userProfileController;
+    }
 }

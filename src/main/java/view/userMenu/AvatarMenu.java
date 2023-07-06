@@ -1,7 +1,7 @@
-package view;
+package view.userMenu;
 
+import controller.RegistrationAndLoginController;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -11,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -19,16 +18,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Modality;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 import model.GameStage;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Random;
 
-import static view.Controllers.*;
 
 public class AvatarMenu extends Application {
+    RegistrationAndLoginController registrationAndLoginController;
     @FXML
     private Circle circle1 = new Circle();
     @FXML
@@ -53,8 +52,10 @@ public class AvatarMenu extends Application {
     private Circle circle11 = new Circle();
     @FXML
     private Circle circle12 = new Circle();
+
     @Override
     public void start(Stage stage) throws Exception {
+        registrationAndLoginController = RegistrationMenu.getRegistrationAndLoginController();
         URL url = AvatarMenu.class.getResource("/FXML/avatarMenu.fxml");
         BorderPane borderPane = FXMLLoader.load(url);
         Scene scene = new Scene(borderPane);
@@ -83,11 +84,10 @@ public class AvatarMenu extends Application {
     public void selectAvatar(MouseEvent mouseEvent) throws Exception {
         Circle circle = (Circle) mouseEvent.getSource();
         registrationAndLoginController.setUserAvatar(circle);
-        UserMenu userMenu = new UserMenu();
-        userMenu.start(GameStage.getGameStage());
+        new UserMenu().start(GameStage.getGameStage());
     }
 
-    public void uploadAvatar(MouseEvent mouseEvent) {
+    public void uploadAvatar() {
         Stage popUpStage = new Stage();
         popUpStage.initModality(Modality.APPLICATION_MODAL);
         popUpStage.setWidth(400);
@@ -102,50 +102,83 @@ public class AvatarMenu extends Application {
         hBox.setAlignment(Pos.CENTER);
         hBox.setSpacing(30);
         Button cancel = new Button();
-        cancel.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                popUpStage.close();
-            }
-        });
+        cancel.setOnMouseClicked(mouseEvent -> popUpStage.close());
         cancel.setText("cancel");
         Button setAvatar = new Button();
-        setAvatar.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                try {
-                    if (registrationAndLoginController.avatarAddressCheck(textField.getText())) {
-                        registrationAndLoginController.setOwnAvatarForUser(textField.getText());
-                        popUpStage.close();
-                        try {
-                            new UserMenu().start(GameStage.getGameStage());
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
-                    } else {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Error while set avatar");
-                        alert.setHeaderText("address is invalid!");
-                        alert.setContentText("you most set your avatar address here!");
-                        alert.showAndWait();
+        setAvatar.setOnMouseClicked(mouseEvent -> {
+            try {
+                if (registrationAndLoginController.avatarAddressCheck(textField.getText())) {
+                    registrationAndLoginController.setOwnAvatarForUser(textField.getText());
+                    popUpStage.close();
+                    try {
+                        new UserMenu().start(GameStage.getGameStage());
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
                     }
-                } catch (MalformedURLException e) {
-                    throw new RuntimeException(e);
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error while set avatar");
+                    alert.setHeaderText("address is invalid!");
+                    alert.setContentText("you most set your avatar address here!");
+                    alert.showAndWait();
                 }
+            } catch (MalformedURLException e) {
+                throw new RuntimeException(e);
             }
         });
         setAvatar.setText("set avatar");
-        hBox.getChildren().addAll(setAvatar,cancel);
+        hBox.getChildren().addAll(setAvatar, cancel);
         VBox vBox = new VBox();
         vBox.setAlignment(Pos.CENTER);
         vBox.setSpacing(30);
-        vBox.getChildren().addAll(label,textField,hBox);
+        vBox.getChildren().addAll(label, textField, hBox);
         Scene scene = new Scene(vBox);
         popUpStage.setScene(scene);
         popUpStage.show();
 
     }
 
-    public void randomAvatar(MouseEvent mouseEvent) {
+    public void randomAvatar() throws Exception {
+        Random random = new Random();
+        int number = random.nextInt() % 12;
+        switch (number) {
+            case 1:
+                registrationAndLoginController.setUserAvatar(circle1);
+                break;
+            case 2:
+                registrationAndLoginController.setUserAvatar(circle2);
+                break;
+            case 3:
+                registrationAndLoginController.setUserAvatar(circle3);
+                break;
+            case 4:
+                registrationAndLoginController.setUserAvatar(circle4);
+                break;
+            case 5:
+                registrationAndLoginController.setUserAvatar(circle5);
+                break;
+            case 6:
+                registrationAndLoginController.setUserAvatar(circle6);
+                break;
+            case 7:
+                registrationAndLoginController.setUserAvatar(circle7);
+                break;
+            case 8:
+                registrationAndLoginController.setUserAvatar(circle8);
+                break;
+            case 9:
+                registrationAndLoginController.setUserAvatar(circle9);
+                break;
+            case 10:
+                registrationAndLoginController.setUserAvatar(circle10);
+                break;
+            case 11:
+                registrationAndLoginController.setUserAvatar(circle11);
+                break;
+            case 12:
+                registrationAndLoginController.setUserAvatar(circle12);
+                break;
+        }
+        new UserMenu().start(GameStage.getGameStage());
     }
 }

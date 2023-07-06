@@ -1,7 +1,6 @@
-package view;
+package view.userMenu;
 
 import controller.RegistrationAndLoginController;
-import controller.UserProfileController;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +13,8 @@ import javafx.stage.Stage;
 import model.GameStage;
 import view.enums.status.RegisterationAndLoginStatus;
 
-import static view.Controllers.registrationAndLoginController;
-import static view.Controllers.userProfileController;
-
 public class LoginMenu extends Application {
+    RegistrationAndLoginController registrationAndLoginController = new RegistrationAndLoginController();
     @FXML
     private TextField username;
     @FXML
@@ -37,7 +34,6 @@ public class LoginMenu extends Application {
         registrationAndLoginController.setCurrentUsername(username.getText());
         RegisterationAndLoginStatus status = registrationAndLoginController.checkLoggingInParameters(password.getText());
         if (status.equals(RegisterationAndLoginStatus.LOGIN_PARAMETERS_ARE_VALID)) {
-            userProfileController.setCurrentPlayer(username.getText());
             UserMenu userMenu = new UserMenu();
             userMenu.start(GameStage.getGameStage());
         } else {
@@ -60,8 +56,6 @@ public class LoginMenu extends Application {
     public void terminateProgram() {
         System.exit(0);
     }
-
-
 
 
 }
